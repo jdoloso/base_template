@@ -25,6 +25,7 @@
     "file-saver": "^2.0.5",
     "jquery": "^3.7.0",
     "ng-zorro-antd": "^15.0.0",
+    "ngx-online-status": "^2.0.0",
     "ngx-permissions": "^15.0.1",
     "ngx-trim-directive": "^2.0.0",
     "node-sass": "^8.0.0",
