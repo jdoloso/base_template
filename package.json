@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@angular/service-worker": "^15.2.9",
     "@ngneat/until-destroy": "^10.0.0-beta.0",
     "@rxweb/reactive-form-validators": "^13.0.1",
     "bootstrap": "^5.3.0",
@@ -28,9 +29,7 @@
     "ngx-online-status": "^2.0.0",
     "ngx-permissions": "^15.0.1",
     "ngx-trim-directive": "^2.0.0",
-    "node-sass": "^8.0.0",
     "rxjs": "~7.5.0",
-    "sass": "^1.62.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
