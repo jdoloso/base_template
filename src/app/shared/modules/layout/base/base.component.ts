@@ -17,6 +17,7 @@ export class BaseComponent implements OnInit {
 
   connectionStatus = true;
   message = new Messages(this.ms);
+  isCollapsed = false;
 
   ngOnInit(): void {
     this.handleStatusChanges();

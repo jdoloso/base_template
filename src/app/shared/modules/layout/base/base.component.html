@@ -1,3 +1,27 @@
 <nz-alert nzType="error" nzMessage="You are offline." *ngIf="!connectionStatus" [nzBanner]="true"></nz-alert>
 
-<router-outlet></router-outlet>
+<nz-layout class="app-layout">
+  <!-- <nz-sider nzCollapsible [nzCollapsedWidth]="70" [nzCollapsed]="isCollapsed" [nzTrigger]="triggerTemplate"
+    nzWidth="270px" (nzCollapsedChange)="isCollapsed = $event">
+    <app-sidebar></app-sidebar>
+  </nz-sider> -->
+  <nz-layout [ngClass]="'full-layout' ">
+    <app-header ></app-header>
+    <nz-content class="d-flex p-0">
+      <div class="container-fluid p-0 d-flex">
+          <router-outlet></router-outlet>
+        <ng-template #dashboardTheme>
+          <div class="align-items-stretch d-flex w-100">
+            <router-outlet></router-outlet>
+          </div>
+        </ng-template>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+
+<ng-template #triggerTemplate>
+  <div class="p-2 d-flex flex-row" [ngClass]="isCollapsed ? 'justify-content-center': 'justify-content-end'">
+    <button nz-button nzType="link"><i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i></button>
+  </div>
+</ng-template>

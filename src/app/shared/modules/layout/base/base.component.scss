@@ -1,0 +1,147 @@
+:host {
+  display: flex;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  ::ng-deep {
+    .app-layout {
+      min-height: 100vh;
+      max-width: 100%;
+    }
+
+    // .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    //   background-color: $primary;
+    //   color: white;
+    // }
+
+    .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+      border: none;
+      padding-left: 0;
+    }
+
+    .ant-menu-sub.ant-menu-inline {
+      background: none !important;
+    }
+
+
+    .ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+      border-right: none;
+    }
+
+    nz-layout {
+      background-color: #F4F8FF;
+    }
+
+    nz-sider {
+      height: 100%;
+      position: fixed;
+      left: 0;
+      overflow: hidden;
+      box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+
+      &:hover {
+        overflow-y: auto;
+      }
+
+      .ant-menu-inline .ant-menu-submenu-title {
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+
+      &.ant-layout-sider-collapsed {
+        & + .right-layout {
+          margin-left: 0 !important;
+          transition: all 0.2s;
+        }
+      }
+    }
+
+    .header-trigger {
+      height: 64px;
+      padding: 24px 24px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s, padding 0s;
+      line-height: normal;
+    }
+
+    .trigger:hover {
+      color: #1890ff;
+    }
+
+    .sidebar-logo {
+      position: relative;
+      height: 64px;
+      padding-left: 24px;
+      overflow: hidden;
+      line-height: 64px;
+      background: #001529;
+      transition: all 0.3s;
+
+      .mdi {
+        font-size: 30px;
+        vertical-align: middle;
+        color: #017ba9 !important;
+      }
+
+      h1 {
+        display: inline-block;
+        margin: 0 0 0 10px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        vertical-align: middle;
+      }
+    }
+
+    .right-layout {
+      margin-left: 270px;
+    }
+
+    .full-layout {
+      margin-left: 70px;
+    }
+
+    nz-header {
+      background: rgba(0,0,0,0);
+      padding: 0;
+    }
+
+    nz-content {
+      margin: 14px 14px;
+      overflow: initial;
+      display: flex;
+    }
+
+    .app-header {
+      position: relative;
+      height: 64px;
+      padding: 0;
+      background-color: white;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+}
+
+// Temporary
+.card {
+  background-color: white;
+  // box-shadow: none;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+}
