@@ -1,0 +1,38 @@
+[debug] [2023-07-21T14:42:56.611Z] ----------------------------------------------------------------------
+[debug] [2023-07-21T14:42:56.612Z] Command:       /Users/jasondoloso/.nvm/versions/node/v18.16.0/bin/node /Users/jasondoloso/.nvm/versions/node/v18.16.0/bin/firebase deploy
+[debug] [2023-07-21T14:42:56.612Z] CLI Version:   12.4.4
+[debug] [2023-07-21T14:42:56.613Z] Platform:      darwin
+[debug] [2023-07-21T14:42:56.613Z] Node Version:  v18.16.0
+[debug] [2023-07-21T14:42:56.617Z] Time:          Fri Jul 21 2023 22:42:56 GMT+0800 (Philippine Standard Time)
+[debug] [2023-07-21T14:42:56.617Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-21T14:42:56.619Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-07-21T14:42:56.713Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-21T14:42:56.713Z] > authorizing via signed-in user (jdoloso@exist.com)
+[debug] [2023-07-21T14:42:56.713Z] [iam] checking project staging for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-21T14:42:56.714Z] > refreshing access token with scopes: []
+[debug] [2023-07-21T14:42:56.715Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-21T14:42:56.715Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-21T14:42:57.686Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-07-21T14:42:57.686Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-07-21T14:42:57.728Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-07-21T14:42:57.728Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-21T14:42:57.740Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging:testIamPermissions [none]
+[debug] [2023-07-21T14:42:57.740Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging:testIamPermissions x-goog-quota-user=projects/staging
+[debug] [2023-07-21T14:42:57.740Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-21T14:42:58.978Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging:testIamPermissions 200
+[debug] [2023-07-21T14:42:58.978Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging:testIamPermissions {}
+[debug] [2023-07-21T14:42:58.979Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project staging:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-07-21T14:42:58.981Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/staging [none]
+[debug] [2023-07-21T14:43:00.513Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/staging 403
+[debug] [2023-07-21T14:43:00.513Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/staging {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-07-21T14:43:00.515Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-07-21T14:43:01.741Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/Users/jasondoloso/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/jasondoloso/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/apiv2.js:289:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project staging. Please make sure the project exists and your account has permission to access it.
